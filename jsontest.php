@@ -34,11 +34,9 @@ $data = curl_exec($ch);
 curl_close($ch);
 fclose($fp);
 
-echo $url;
-
 $json = file_get_contents($path);
 $jvar = json_decode($json,TRUE);
-print_r($jvar);
+//commented out; good for testing json is parsing as expected:  print_r($jvar);
 
-echo $jvar[0]["net_hourly_stat"]["created_at"] 
+echo $jvar[0]["net_hourly_stat"]["data_received"] 
 ?>
